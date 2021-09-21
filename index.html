@@ -1,12 +1,96 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<div class="home">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+
+	<title>Good Soup</title>
+	<meta name="description" content="We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton.">
+
+	<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Good Soup | We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton.</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Good Soup" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton." />
+<meta property="og:description" content="We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton." />
+<link rel="canonical" href="http://goodsoup.com/" />
+<meta property="og:url" content="http://goodsoup.com/" />
+<meta property="og:site_name" content="Good Soup" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Good Soup" />
+<script type="application/ld+json">
+{"description":"We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton.","headline":"Good Soup","url":"http://goodsoup.com/","@type":"WebSite","name":"Good Soup","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+	
+
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="canonical" href="http://goodsoup.com/">
+	<link rel="alternate" type="application/rss+xml" title="Good Soup" href="http://goodsoup.com/episodes.rss" />
+
+<!-- Get JQuery from CDN -->
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+
+	<script src="https://unpkg.com/wavesurfer.js"></script>
+</head>
+
+
+  <body>
+
+    <header>
+
+  <div class="wrapper">
+    <div class="header-container">
+      <img src="/img/logo.svg" alt="Good Soup Logo" />
+      <div class="header-info">
+        <a class="site-title" href="/">Good Soup</a>
+        <p>With: DJ Retr0 &</p>
+        <p>Mystery Apprentice 1 & 2</p>
+        <br>
+        <p>Live on air and streaming:</p>
+        <p>@ WHRW 90.5FM Binghamton <sub>(In the southern tier)</sub></p>
+        <p>@ <a href="https://whrw.fm/">WHRW.fm</a></p>
+      </div>
+    </div>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+          <a class="page-link" href="/about/">About Good Soup</a>
+      </div>
+    </nav>
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+      	<h1></h1>
+      	
+        <div class="home">
 
   <div class="page-heading">
     <h1>
-      {{ site.description }}
+      We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton.
     </h1>
     <p>
       Airing weekly, Good Soup is the kitchen sink in audio form. Fusing genres like <code>Jazz</code>, <code>Pop</code>, <code>R&B</code>, <code>Classic Rock</code>, <code>Prog. Rock</code>, <code>Soul</code>, <code>House</code>, <code>Indie</code> and more; DJ Retr0 gives you a weekly dose of that delicious soup you just can't quite put your finger on.
@@ -20,20 +104,53 @@ layout: default
   </div>
 
   <ul class="post-list">
-    {% for post in site.posts limit:10 %}
-      <li>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <p>{{ post.excerpt }}</p>
-      </li>
-    {% endfor %}
+    
   </ul>
 
-  <h3 class="rss-subscribe"><a href="{{ "/episodes.rss" | prepend: site.baseurl }}"Subscribe to >Subscribe to {{ site.title_short }} in your favorite podcast client</a></h3>
-  {% if site.itunes_url %}
-  <h3 class="rss-subscribe"><a href="{{ site.itunes_url }}">Subscribe on iTunes</a></h3>
-  {% endif %}
+  <h3 class="rss-subscribe"><a href="/episodes.rss"Subscribe to >Subscribe to Good Soup in your favorite podcast client</a></h3>
+  
 
 </div>
+
+      </div>
+    </div>
+
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Tell us your soup</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Contact Good Soup:</li>
+          <li><a href="mailto:hey@goodsoup.com">hey@goodsoup.com</a></li>
+        </ul>
+        <ul class="social-media-list">
+          
+			
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="wrapper">
+    <b>
+      - DJ Retr0
+    </b>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
