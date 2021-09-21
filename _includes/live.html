@@ -1,0 +1,33 @@
+<a href="http://stream.whrwfm.org/hi" id="welive">
+    <div>
+        We're live right now! Click to listen
+    </div>
+</a>
+<style>
+#welive {
+    display: none;
+}
+#welive div {
+    animation: livefade 1.5s ease-in-out 0s infinite alternate;
+    background-color: red;
+    padding: 2rem 1rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: white;
+}
+@keyframes livefade {
+  from {
+    background-color: red;
+  }
+
+  to {
+    background-color: rgb(252, 127, 127);
+  }
+}
+</style>
+<script>
+    const d = new Date();
+    if(d.getDay() == 1 && ( d.getHours() >= 22) && (d.getHours() <= 23 && d.getMinutes() <= 30)) document.querySelector('#welive').style.display = "block";
+</script>

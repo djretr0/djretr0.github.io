@@ -3,10 +3,10 @@ exclude: ['README.md', 'preview.sh', 'Gemfile', 'Gemfile.lock']
 # Used to generate the site
 title: "Good Soup"
 title_short: "Good Soup"
-email: "hey@goodsoup.com"
+email: "goodsoup@djretr0.com"
 description: "We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton."
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://goodsoup.com" # the base hostname & protocol for your site
+url: "http://djretr0.com" # the base hostname & protocol for your site
 # itunes_url: "https://itunes.apple.com/us/podcast/xxx"
 
 # itunes_id creates a smart banner on Safari in iOS prompting
@@ -27,7 +27,7 @@ seo:
 podcast:
   owner:
     name: DJ Retr0
-    email: hey@goodsoup.com
+    email: hey@djretr0.com
   explicit: "no" # Change to yes if you're a potty mouth
   image: /img/logo.png # iTunes requires 2,000 pixel art
   keywords: "music WHRW Binghamton"
