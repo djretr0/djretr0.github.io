@@ -16,13 +16,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton." />
 <meta property="og:description" content="We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton." />
-<link rel="canonical" href="http://goodsoup.com/about/" />
-<meta property="og:url" content="http://goodsoup.com/about/" />
+<link rel="canonical" href="http://djretr0.com/about/" />
+<meta property="og:url" content="http://djretr0.com/about/" />
 <meta property="og:site_name" content="Good Soup" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="About" />
 <script type="application/ld+json">
-{"description":"We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton.","headline":"About","url":"http://goodsoup.com/about/","@type":"WebSite","name":"Good Soup","@context":"https://schema.org"}</script>
+{"description":"We serve fresh piping hot soup every Wednesday from 10:00PM - 11:30PM on 90.5FM WHRW Binghamton.","headline":"About","url":"http://djretr0.com/about/","@type":"WebSite","name":"Good Soup","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -32,8 +32,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-	<link rel="canonical" href="http://goodsoup.com/about/">
-	<link rel="alternate" type="application/rss+xml" title="Good Soup" href="http://goodsoup.com/episodes.rss" />
+	<link rel="canonical" href="http://djretr0.com/about/">
+	<link rel="alternate" type="application/rss+xml" title="Good Soup" href="http://djretr0.com/episodes.rss" />
 
 <!-- Get JQuery from CDN -->
 	<script
@@ -42,16 +42,53 @@
 	  crossorigin="anonymous"></script>
 
 	<script src="https://unpkg.com/wavesurfer.js"></script>
+
+	<script>
+		!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+		posthog.init('phc_AJohfkpl2LbtJYBlD6NQ43hFxSFZyOIvprC7so8IphR',{api_host:'https://app.posthog.com'})
+	</script>
 </head>
 
 
   <body>
+    <a href="http://stream.whrwfm.org/hi" id="welive">
+    <div>
+        We're live right now! Click to listen
+    </div>
+</a>
+<style>
+#welive {
+    display: none;
+}
+#welive div {
+    animation: livefade 1.5s ease-in-out 0s infinite alternate;
+    background-color: red;
+    padding: 2rem 1rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: white;
+}
+@keyframes livefade {
+  from {
+    background-color: red;
+  }
 
+  to {
+    background-color: rgb(252, 127, 127);
+  }
+}
+</style>
+<script>
+    const d = new Date();
+    if(d.getDay() == 1 && ( d.getHours() >= 22) && (d.getHours() <= 23 && d.getMinutes() <= 30)) document.querySelector('#welive').style.display = "block";
+</script>
     <header>
 
   <div class="wrapper">
     <div class="header-container">
-      <img src="/img/logo.svg" alt="Good Soup Logo" />
+      <a href="/"><img src="/img/logo.svg" alt="Good Soup Logo" /></a>
       <div class="header-info">
         <a class="site-title" href="/">Good Soup</a>
         <p>With: DJ Retr0 &</p>
@@ -74,6 +111,7 @@
 
       <div class="trigger">
           <a class="page-link" href="/about/">About Good Soup</a>
+          <a class="page-link" href="/explicit">Explicit Soup</a>
       </div>
     </nav>
   </div>
@@ -109,7 +147,7 @@
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
           <li>Contact Good Soup:</li>
-          <li><a href="mailto:hey@goodsoup.com">hey@goodsoup.com</a></li>
+          <li><a href="mailto:goodsoup@djretr0.com">goodsoup@djretr0.com</a></li>
         </ul>
         <ul class="social-media-list">
           

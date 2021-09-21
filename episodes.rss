@@ -3,8 +3,8 @@
 xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://www.rssboard.org/media-rss" version="2.0">
 <channel>
 	<title>Good Soup</title>
-	<link>http://goodsoup.com</link>
-	<lastBuildDate>Mon, 20 Sep 2021 22:52:57 -0400</lastBuildDate>
+	<link>http://djretr0.com</link>
+	<lastBuildDate>Tue, 21 Sep 2021 00:18:17 -0400</lastBuildDate>
 	<language>en-US</language>
 	<generator>Jekyll (http://jekyllrb.com)</generator>
 	<itunes:author>DJ Retr0</itunes:author>
@@ -15,12 +15,12 @@ xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:dc="htt
 	<itunes:keywords>music WHRW Binghamton</itunes:keywords>
 	<itunes:owner>
 		<itunes:name>DJ Retr0</itunes:name>
-		<itunes:email>hey@goodsoup.com</itunes:email>
+		<itunes:email>goodsoup@djretr0.com</itunes:email>
 	</itunes:owner>
 	
 	<itunes:category text="Music Commentary"/>
 	
-	<itunes:image href="http://goodsoup.com/img/logo.png"/>
+	<itunes:image href="http://djretr0.com/img/logo.png"/>
 
 
 </channel>
