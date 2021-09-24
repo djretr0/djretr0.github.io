@@ -358,15 +358,17 @@
 			responsive: true,
 		});
 		wavesurfer.on('loading', function (percent) {
-			// document.querySelector(".mediaplayer").style.opacity = 0;
-			// document.querySelector("#loader").innerHTML = `
-			// <p>
-			// 	Loading episode. This could take a minute or two, they're kinda long...
-			// </p>
-			// <p style="font-size: .8rem">
-			// 	Luckily, we're loading the entire thing right now, so once it's done you can stream freely without any fears of network disruption.
-			// </p>
-			// `
+			console.log(percent)
+			document.querySelector(".mediaplayer").style.opacity = 0;
+			document.querySelector("#loader").innerHTML = `
+			<p>
+				Loading episode. This could take a minute or two, they're kinda long...<br>
+				${percent < 100 ? percent+"% Loaded" : "Decompressing audio for best sound quality (less than a minute remaining)" }
+			</p>
+			<p style="font-size: .8rem">
+				Luckily, we're loading the entire thing right now, so once it's done you can stream freely without any fears of network disruption.
+			</p>
+			`
 		});
 		wavesurfer.on('ready', () => {
 			document.querySelector(".mediaplayer").style.opacity = 1;
