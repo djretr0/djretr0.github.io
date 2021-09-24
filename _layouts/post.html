@@ -9,7 +9,7 @@
 	<script>
 
 		const formatTime = (sec) => {
-			return `${Math.round(sec/60) > 9 ? Math.round(sec/60) : '0' + Math.round(sec/60)}:${Math.round(sec) % 60 > 9 ? Math.round(sec) % 60 : "0" + Math.round(sec)}`
+			return `${Math.round(sec/60) > 9 ? Math.round(sec/60) : '0' + Math.round(sec/60)}:${(Math.round(sec) % 60) > 9 ? Math.round(sec) % 60 : "0" + Math.round(sec) % 60}`
 		}
 	</script>
 
@@ -17,34 +17,38 @@
       <div class="wrapper">
       	<h1 style="margin-bottom: 0;">{{ page.title }}</h1>
       	<p>{{ page.date | date: "%-d %B %Y" }}</p>
-		<div id="loader"></div>
-		<div class="mediaplayer">
-			<div id="waveform"></div>
-			<div style="display: flex">
-				<div class="controls">
-					<button onclick="wavesurfer.play()">
-						Play
-					</button>
-					<button onclick="wavesurfer.pause()">
-						Pause
-					</button>
-					<button onclick="wavesurfer.stop()">
-						Stop
-					</button>
-				</div>
-				<div style="margin-left: auto;" class="info">
-					<div>
-						<span id="player-ctime">00:00</span>/<span id="player-duration">00:00</span>
+		<div class="mp-container">
+			<div id="loader"></div>
+			<div class="mediaplayer">
+				<div id="waveform"></div>
+				<div style="display: flex">
+					<div class="controls">
+						<button onclick="wavesurfer.play()">
+							Play
+						</button>
+						<button onclick="wavesurfer.pause()">
+							Pause
+						</button>
+						<button onclick="wavesurfer.stop()">
+							Stop
+						</button>
+					</div>
+					<div style="margin-left: auto;" class="info">
+						<div>
+							<span id="player-ctime">00:00</span>/<span id="player-duration">00:00</span>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-			<div style="padding-top: 20px;"><a href="/podcasts/{{ page.media }}">Download MP3</a> | <a href="/episodes.rss">Subscribe to the podcast</a> {% if site.itunes_url %}| <a href="{{ site.itunes_url }}">Subscribe on iTunes</a> {% endif %}
+			<div style="padding-top: 20px;"><a href="/podcasts/{{ page.media }}">Download MP3</a> | <a href="/episodes.rss">Subscribe with your favorite podcast client</a> {% if site.itunes_url %}| <a href="{{ site.itunes_url }}">Subscribe on iTunes</a> {% endif %}
 			</div>
-		<div style="padding-top: 20px;">
+		<div class="post-content">
 			{{ content }}
 		</div>
+		{% if page.tracklist %}
 		<div class="tracklist">
+			Tracklist:
 			<ul>
 				{% for track in page.tracklist %}
 				<li>{% if track.url %}<a href="{{track.url}}">{{track.name}}</a>{% else %}{{track.name}}{% endif %} - <a onclick="wavesurfer.seekTo({{track.time}}/wavesurfer.getDuration())" id="trackid_{{track.time}}" href="#"></a></li>
@@ -54,8 +58,11 @@
 				{% endfor %}
 			</ul>
 		</div>
+		{% endif %}
+		{% if page.spotify-playlist %}
 		<p>Spotify Playlist for this week:</p>
         <iframe src="{{page.spotify-playlist}}" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+		{% endif %}
 	</div>
     </div>
 
@@ -71,12 +78,15 @@
 			responsive: true,
 		});
 		wavesurfer.on('loading', function (percent) {
-			document.querySelector(".mediaplayer").style.opacity = 0;
-			document.querySelector("#loader").innerHTML = `
-			<p>
-				Loading episode. This could take a second, they're kinda long...
-			</p>
-			`
+			// document.querySelector(".mediaplayer").style.opacity = 0;
+			// document.querySelector("#loader").innerHTML = `
+			// <p>
+			// 	Loading episode. This could take a minute or two, they're kinda long...
+			// </p>
+			// <p style="font-size: .8rem">
+			// 	Luckily, we're loading the entire thing right now, so once it's done you can stream freely without any fears of network disruption.
+			// </p>
+			// `
 		});
 		wavesurfer.on('ready', () => {
 			document.querySelector(".mediaplayer").style.opacity = 1;
@@ -90,7 +100,7 @@
 			document.querySelector('#player-duration').innerHTML = formatTime(wavesurfer.getDuration());
 			document.querySelector('#player-ctime').innerHTML = formatTime(wavesurfer.getCurrentTime());
 		});
-		wavesurfer.load('/podcasts/{{page.media}}');
+		wavesurfer.load('{{page.media}}');
 </script>
 </body>
 </html>

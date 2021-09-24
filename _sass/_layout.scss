@@ -283,9 +283,42 @@ code {
     }
 }
 
+.mp-container {
+    position: relative;
+}
+
+#loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: loading-player .75s ease-in-out 0s infinite alternate;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+#loader * {
+    margin: auto;
+}
+
+@keyframes loading-player {
+    from {
+      background-color: inherit;
+    }
+  
+    to {
+      background-color: #737373;
+    }
+  }
+
 .controls button {
     border: none;
     background-color: inherit;
     color: green;
     cursor: pointer;
+}
+
+.post-content {
+    margin-top: 20px;
+    padding: 1rem;
+    background-color: #737373;  
 }
