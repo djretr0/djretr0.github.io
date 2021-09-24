@@ -4,7 +4,7 @@ xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:dc="htt
 <channel>
 	<title>Good Soup</title>
 	<link>http://djretr0.com</link>
-	<lastBuildDate>Tue, 21 Sep 2021 01:20:38 -0400</lastBuildDate>
+	<lastBuildDate>Thu, 23 Sep 2021 20:48:18 -0400</lastBuildDate>
 	<language>en-US</language>
 	<generator>Jekyll (http://jekyllrb.com)</generator>
 	<itunes:author>DJ Retr0</itunes:author>
@@ -23,5 +23,21 @@ xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:dc="htt
 	<itunes:image href="http://djretr0.com/img/logo.png"/>
 
 
+	<item>
+		<title>Episode 1: Chicken Soup</title>
+		<dc:creator>DJ Retr0</dc:creator>
+		<pubDate>Wed, 22 Sep 2021 08:00:00 -0400</pubDate>
+		<link>http://djretr0.com/episodes/1/</link>
+		<guid isPermaLink="true">http://djretr0.com/episodes/1/</guid>
+		<description>Where it all begins. A bit of intro and some good vibes to set the stage for the semester to come.</description>
+		<content:encoded>&lt;p&gt;The first episode 👀. As one could expect there had to be a technical hiccup so the first 10ish minutes of the show is missing from the recording. That being said, there’s a dope 80 minutes to listen to as well as the spotify playlist below to supplement what was missed on-air.&lt;/p&gt;
+</content:encoded>
+		<itunes:author>DJ Retr0</itunes:author>
+		<itunes:summary>Where it all begins. A bit of intro and some good vibes to set the stage for the semester to come.</itunes:summary>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>01:19:44</itunes:duration>
+		<itunes:image href="http://djretr0.com/img/logo.png"/><enclosure url="http://djretr0.com/podcasts/https://media1.vocaroo.com/mp3/163Nwsy4rY7o" length="114817566" type="audio/mpeg" />
+	</item>
+	
 </channel>
 </rss>
