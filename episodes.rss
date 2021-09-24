@@ -4,7 +4,7 @@ xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:dc="htt
 <channel>
 	<title>Good Soup</title>
 	<link>http://djretr0.com</link>
-	<lastBuildDate>Thu, 23 Sep 2021 20:54:34 -0400</lastBuildDate>
+	<lastBuildDate>Fri, 24 Sep 2021 00:37:14 -0400</lastBuildDate>
 	<language>en-US</language>
 	<generator>Jekyll (http://jekyllrb.com)</generator>
 	<itunes:author>DJ Retr0</itunes:author>
@@ -36,7 +36,7 @@ xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:dc="htt
 		<itunes:summary>Where it all begins. A bit of intro and some good vibes to set the stage for the semester to come.</itunes:summary>
 		<itunes:explicit>no</itunes:explicit>
 		<itunes:duration>01:19:44</itunes:duration>
-		<itunes:image href="http://djretr0.com/img/logo.png"/><enclosure url="http://djretr0.com/podcasts/https://media1.vocaroo.com/mp3/163Nwsy4rY7o" length="114817566" type="audio/mpeg" />
+		<itunes:image href="http://djretr0.com/img/logo.png"/><enclosure url="https://media1.vocaroo.com/mp3/163Nwsy4rY7o" length="114817566" type="audio/mpeg" />
 	</item>
 	
 </channel>
